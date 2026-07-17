@@ -5,6 +5,7 @@
   "scripts": {
     "start": "bash scripts/serve.sh",
     "serve": "python3 -m http.server 8765 --bind 127.0.0.1",
-    "screenshots": "node scripts/capture-screenshots.mjs"
+    "screenshots": "node scripts/capture-screenshots.mjs",
+    "preview-video": "node scripts/capture-preview-video.mjs"
   }
 }

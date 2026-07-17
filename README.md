@@ -8,13 +8,13 @@ An **alternative editorial** UI/UX concept for the landing page of **W Steak Res
 [![License: MIT](https://img.shields.io/badge/license-MIT-44403C?style=for-the-badge)](LICENSE)
 [![v1 concept](https://img.shields.io/badge/related-v1%20concept-231F20?style=for-the-badge)](https://github.com/Zirvey/w-steak-restaurant-landing-page)
 
-![Hero section — desktop preview](docs/screenshots/hero-desktop.jpg)
-
 ---
 
 ## Preview
 
-Screenshots and atmosphere video below are from **this editorial (v2) site only** — not from the official restaurant site or the v1 concept.
+<video src="docs/preview-hero.mp4" controls muted playsinline width="100%"></video>
+
+Hero entrance, then scroll to the grill atmosphere section. Stills below are from **this editorial (v2) site only**.
 
 ### Desktop
 
