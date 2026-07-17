@@ -51,7 +51,7 @@ Content (copy, menu prices, imagery, logo) is sourced from the official website 
 ## Features
 
 - **Editorial parchment & saffron** visual language
-- **Full-bleed dark hero** with grill video and typography entrance
+- **Full-bleed dark hero** with typography entrance and steak still
 - **Atmosphere video** sections (grill / cut) with reduced-motion fallbacks
 - **Marquee** dish-name scroll
 - **Menu highlights** with pricing from the official menu
