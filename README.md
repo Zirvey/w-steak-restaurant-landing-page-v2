@@ -30,19 +30,11 @@ Screenshots and atmosphere video below are from **this editorial (v2) site only*
 
 ![Mobile hero](docs/screenshots/hero-mobile.jpg)
 
-### Atmosphere video
-
-Local grill / steak clips used on the page:
-
-- `assets/video/hero-grill.mp4`
-- `assets/video/steak-cut.mp4`
-- `assets/video/meat-grill.mp4` (fallback)
-
 ---
 
 ## About this project
 
-This repository contains a **non-production, unofficial** front-end concept that reimagines the public landing experience for [wrestaurant.cz](https://wrestaurant.cz/) with an **Amrit Palace–inspired editorial** system (parchment canvas, saffron accent, sharp edges).
+This repository contains a **non-production, unofficial** front-end concept that reimagines the public landing experience for [wrestaurant.cz](https://wrestaurant.cz/) with a warm editorial visual language — parchment canvas, saffron accent, sharp edges.
 
 | | |
 |---|---|
@@ -58,110 +50,18 @@ Content (copy, menu prices, imagery, logo) is sourced from the official website 
 
 ## Features
 
-- **Editorial parchment & saffron** visual language (Amrit Palace token set)
+- **Editorial parchment & saffron** visual language
 - **Full-bleed dark hero** with typography entrance and steak still
-- **Local atmosphere video** sections (grill / cut) with `prefers-reduced-motion` fallbacks
-- **Marquee** dish-name scroll as primary extended motion
+- **Atmosphere video** sections (grill / cut) with reduced-motion fallbacks
+- **Marquee** dish-name scroll
 - **Menu highlights** with pricing from the official menu
 - **Sharp cards**, ghost outlined buttons, hairline dividers
 - **Fully responsive** layout (mobile → desktop)
-- **`noindex`** meta — concept demo only
 
-### Design system
+### Visual direction
 
-| File | Purpose |
-|------|---------|
-| `design-system/tokens.json` | Design tokens (colors, type, spacing) |
-| `design-system/variables.css` | CSS custom properties |
-| `design-system/theme.css` | Tailwind v4 `@theme` reference |
-| `design-system/DESIGN.md` | Full style reference and component rules |
-
-**Applied for W Steak:**
-
-- Parchment canvas `#d8cbb8`, saffron accent `#d49653`, warm onyx text
-- Display: **Cormorant Garamond** 300
-- UI/body: **DM Sans** 500
-
----
-
-## Quick start
-
-No build step required — static HTML, CSS, and vanilla JavaScript.
-
-```bash
-# Clone
-git clone https://github.com/Zirvey/w-steak-restaurant-landing-page-v2.git
-cd w-steak-restaurant-landing-page-v2
-
-# Serve locally (recommended — avoid file://)
-python3 -m http.server 8765 --bind 127.0.0.1
-# → http://127.0.0.1:8765/
-```
-
-Or:
-
-```bash
-npm start
-```
-
-### Regenerate screenshots
-
-Serve the site, then:
-
-```bash
-python3 -m http.server 8765 --bind 127.0.0.1 &
-npm install puppeteer --no-save
-npm run screenshots
-# converts PNGs → optimized JPGs via sips (macOS)
-```
-
----
-
-## Project structure
-
-```
-├── index.html              # Main landing page
-├── css/styles.css          # Custom styles & animations
-├── js/main.js              # Nav, video, reveals, marquee
-├── assets/
-│   ├── logo.png
-│   ├── favicon.ico
-│   ├── images/             # Photography from wrestaurant.cz
-│   └── video/              # Local atmosphere clips (v2 only)
-├── design-system/          # Amrit Palace editorial tokens
-├── docs/screenshots/       # README preview images (v2 site)
-├── scripts/
-│   ├── serve.sh
-│   └── capture-screenshots.mjs
-├── LICENSE                 # MIT — code in this repo
-├── NOTICE.md               # Third-party assets & trademarks
-└── DISCLAIMER.md           # Unofficial concept notice
-```
-
----
-
-## Deployment
-
-### GitHub Pages (recommended)
-
-This repo includes a GitHub Actions workflow that deploys on every push to `main`.
-
-1. Go to **Settings → Pages**
-2. Source: **GitHub Actions**
-3. After the first successful workflow run, the site is available at:
-   `https://zirvey.github.io/w-steak-restaurant-landing-page-v2/`
-
-Manual fallback (branch deploy):
-
-1. **Settings → Pages**
-2. Source: **Deploy from branch**
-3. Branch: `main` / root (`/`)
-
-`.nojekyll` is included so asset paths are served as-is.
-
-### Any static host
-
-Upload the repository root to Netlify, Vercel, Cloudflare Pages, or any static file server.
+- **Typography:** Cormorant Garamond + DM Sans
+- **Palette:** `#d8cbb8` · `#d49653` · `#2c2c2c`
 
 ---
 

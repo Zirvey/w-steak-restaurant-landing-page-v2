@@ -575,7 +575,7 @@ body.is-ready .hero-still img {
   margin-top: 0.08em;
 }
 
-/* Amrit-style letter split animation */
+/* Letter split animation */
 .hero-split .char {
   display: inline-block;
   overflow: hidden;
@@ -749,7 +749,7 @@ body.is-ready .hero-anim.is-in {
   margin: 0;
 }
 
-/* Menu — Amrit Palace style: panel list + photography */
+/* Menu — panel list + photography */
 .menu-spread {
   display: grid;
   gap: 0;
@@ -919,7 +919,7 @@ body.is-ready .hero-anim.is-in {
   }
 }
 
-/* Legacy menu cards removed in favor of Amrit-style spreads */
+/* Legacy menu cards removed in favor of editorial spreads */
 
 /* Atmospheric video section */
 .atmo {
@@ -1107,7 +1107,7 @@ body.is-ready .hero-anim.is-in {
   text-underline-offset: 3px;
 }
 
-/* Scroll reveals (Amrit Palace–style, DESIGN.md easing) */
+/* Scroll reveals */
 .reveal-in,
 .reveal {
   opacity: 0;

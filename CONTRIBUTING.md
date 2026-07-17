@@ -24,11 +24,10 @@ This is an **unofficial design concept** for W Steak Restaurant. Please read [DI
 ## How to contribute
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-change`
+2. Create a feature branch
 3. Make your changes
-4. Test locally: `python3 -m http.server 8765 --bind 127.0.0.1`
-5. Commit with a clear message
-6. Open a Pull Request describing what changed and why
+4. Commit with a clear message
+5. Open a Pull Request describing what changed and why
 
 ## Code style
 

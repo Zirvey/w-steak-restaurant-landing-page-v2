@@ -91,7 +91,7 @@
     });
   }
 
-  /** Amrit-style: split display lines into characters, stagger from below */
+  /** Split display lines into characters, stagger from below */
   function splitHeroText() {
     document.querySelectorAll('.hero-split').forEach((el) => {
       const lineDelay = Number(el.dataset.delay || 0) * 0.12;

@@ -1,9 +1,9 @@
-# Amrit Palace — Style Reference
+# Editorial Style Reference
 > spiced parchment gallery — a candlelit beige wall holding sparse saffron punctuation beneath breath-soft serif headlines.
 
 **Theme:** light
 
-Amrit Palace treats the screen like a curated dining room: a warm beige parchment canvas (#d8cbb8) carries the entire interface, accented only by a single saffron-orange moment (#d49653) and grounded by deep warm-black type (#2c2c2c). Typography carries the luxury — whisper-weight 300 headlines reaching 115px in a serif display face, paired with confident 500-weight sans-serif for navigation, buttons, and body, set uppercase with tight negative tracking. Geometry is deliberately sharp: zero border-radius on cards, 1px hairline borders dividing sections like editorial column rules, 3px on interactive elements. Full-bleed atmospheric photography with dark overlays bookends the page, while the lower half unfolds as a wide editorial spread on the warm canvas.
+This editorial system treats the screen like a curated dining room: a warm beige parchment canvas (#d8cbb8) carries the entire interface, accented only by a single saffron-orange moment (#d49653) and grounded by deep warm-black type (#2c2c2c). Typography carries the luxury — whisper-weight 300 headlines reaching 115px in a serif display face, paired with confident 500-weight sans-serif for navigation, buttons, and body, set uppercase with tight negative tracking. Geometry is deliberately sharp: zero border-radius on cards, 1px hairline borders dividing sections like editorial column rules, 3px on interactive elements. Full-bleed atmospheric photography with dark overlays bookends the page, while the lower half unfolds as a wide editorial spread on the warm canvas.
 
 ## Tokens — Colors
 
