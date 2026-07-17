@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W Steak Restaurant — Editorial Concept (Unofficial)</title>
+  <meta name="description" content="Alternative editorial redesign for W Steak Restaurant Prague. Not the official wrestaurant.cz website.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="design-system/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="has-concept-banner">
+
+  <aside id="concept-banner" class="concept-banner" role="note" aria-label="Website disclaimer">
+    <div class="concept-banner-inner">
+      <svg class="concept-banner-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <p class="concept-banner-text">
+        <strong>Redesign concept</strong> — unofficial demo, not the official W Steak Restaurant website.
+        <span class="concept-banner-sep" aria-hidden="true">·</span>
+        <span class="concept-banner-cs">Neoficiální koncept redesignu.</span>
+        <a href="https://wrestaurant.cz" class="concept-banner-link">Official site →</a>
+      </p>
+    </div>
+  </aside>
+
+  <header id="site-nav" class="site-nav" data-nav-theme="dark">
+    <div class="site-nav-inner">
+      <a href="#top" class="nav-mark" aria-label="W Steak Restaurant home">
+        <img src="assets/logo.png" alt="" class="nav-logo" width="88" height="32">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wrestaurant.cz/menu" class="link-nav">Menu</a>
+        <button type="button" class="icon-btn" aria-label="Gift cards">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-width="1.5" d="M20 12v8H4V12M2 7h20v5H2V7zM12 22V7M12 7H7.5a2.5 2.5 0 110-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 100-5C13 2 12 7 12 7z"/></svg>
+        </button>
+        <a href="https://wrestaurant.cz/book-a-table" class="btn-ghost btn-ghost--nav">Reserve <span aria-hidden="true">▾</span></a>
+      </div>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <button type="button" id="drawer-close" class="btn-ghost btn-ghost--light" aria-label="Close menu">Close</button>
+    <nav aria-label="Mobile">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wrestaurant.cz/book-a-table">Reserve</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero 1: darkened steak still + Amrit-style type animation -->
+    <section class="hero bleed" id="top" data-nav-theme="dark">
+      <div class="hero-still">
+        <img src="assets/images/hero-steak.jpg" alt="Charcoal-grilled steak at W Restaurant Prague" width="1920" height="1080">
+        <div class="hero-still-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-layout">
+        <div class="hero-typography" aria-hidden="true">
+          <div class="hero-line-row">
+            <span class="hero-meta-label hero-anim" data-delay="0">Prague · Old Town Square</span>
+            <p class="hero-display hero-split" data-delay="1">Meat,</p>
+          </div>
+          <div class="hero-line-row">
+            <p class="hero-display hero-split" data-delay="2">Wine &amp;</p>
+            <span class="hero-meta-label hero-anim" data-delay="3">Est. 2019</span>
+          </div>
+          <p class="hero-display hero-display--solo hero-split" data-delay="4">Whiskey</p>
+        </div>
+
+        <h1 class="sr-only">W Steak Restaurant — Meat, Wine & Whiskey</h1>
+
+        <p class="hero-body hero-anim" data-delay="5">Argentinian beef, US Prime and Wagyu on charcoal grill — in the historic heart of Prague.</p>
+        <div class="hero-cta hero-anim" data-delay="6">
+          <a href="https://wrestaurant.cz/book-a-table" class="btn-ghost btn-ghost--light">Reserve a Table</a>
+          <a href="#menu" class="link-text-light">Explore menu</a>
+        </div>
+
+        <aside class="rating-widget hero-anim" data-delay="7" aria-label="Guest rating">
+          <p class="rating-widget-score"><span>4.7</span>/5</p>
+          <p class="rating-widget-label">Excellent</p>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p class="caption-label rating-widget-source">Google</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Hero 2: grill video band (follows the still) -->
+    <section class="hero-video bleed" data-nav-theme="dark" aria-label="Grill atmosphere">
+      <div class="media-bg">
+        <video class="media-bg__video" autoplay muted loop playsinline preload="auto" poster="assets/images/rib-eye.jpg" aria-hidden="true">
+          <source src="assets/video/hero-grill.mp4" type="video/mp4">
+        </video>
+        <img class="media-bg__fallback" src="assets/images/rib-eye.jpg" alt="" width="1920" height="1080">
+      </div>
+      <div class="media-overlay media-overlay--soft" aria-hidden="true"></div>
+      <div class="hero-video-caption editorial">
+        <p class="caption-label caption-label--light reveal">On charcoal</p>
+        <h2 class="display-heading display-heading--on-dark reveal">Fire, smoke &amp; prime beef</h2>
+      </div>
+    </section>
+
+    <div class="marquee bleed" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Rib Eye Argentina <span class="dot">·</span> Filet Mignon <span class="dot">·</span> US Prime Dry-Aged <span class="dot">·</span> Wagyu <span class="dot">·</span> Grand Wines <span class="dot">·</span> 1,000+ Whiskeys <span class="dot">·</span></span>
+        <span class="marquee-item">Rib Eye Argentina <span class="dot">·</span> Filet Mignon <span class="dot">·</span> US Prime Dry-Aged <span class="dot">·</span> Wagyu <span class="dot">·</span> Grand Wines <span class="dot">·</span> 1,000+ Whiskeys <span class="dot">·</span></span>
+      </div>
+    </div>
+
+    <section class="section bleed" id="about" data-nav-theme="light">
+      <div class="section-inner editorial">
+        <p class="caption-label reveal">About the house</p>
+        <h2 class="display-heading reveal">Steakhouse in iconic cellars</h2>
+        <p class="body-copy reveal">Since 2019, <span class="emph">W Steak Restaurant</span> has become one of Prague's most sought-after steakhouses — modern cuisine, grand wines, and over 1,000 whiskey expressions beneath Old Town Square.</p>
+      </div>
+    </section>
+
+    <hr class="rule bleed">
+
+    <section class="section bleed" id="menu" data-nav-theme="light">
+      <div class="section-inner editorial reveal">
+        <p class="caption-label">From our menu</p>
+        <h2 class="display-heading">Signature cuts</h2>
+        <p class="body-copy">Prices in CZK including VAT. Side dishes not included.</p>
+      </div>
+
+      <div class="menu-spread bleed reveal">
+        <div class="menu-panel">
+          <h3 class="menu-panel-title">Signature cuts</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Filet Mignon</span>
+                <span class="menu-item-price">1 195 / 1 795</span>
+              </div>
+              <p class="menu-item-desc">Premium beef tenderloin grilled on charcoal, Argentina (200g / 400g)</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Rib-Eye Steak</span>
+                <span class="menu-item-price">1 345 / 1 995</span>
+              </div>
+              <p class="menu-item-desc">Premium Rib-Eye steak grilled on charcoal, Argentina (250g / 450g)</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Dry-Aged / Gold-Plated</span>
+                <span class="menu-item-price">495 / 795</span>
+              </div>
+              <p class="menu-item-desc">T-Bone or Tomahawk, home-aged on charcoal (min 900g), price per 100g</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">US Prime / Gold-Plated</span>
+                <span class="menu-item-price">545 / 845</span>
+              </div>
+              <p class="menu-item-desc">Prime steak grilled on charcoal, USA (min. 400g), price per 100g</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Wagyu A4 / Gold-Plated</span>
+                <span class="menu-item-price">1 995 / 2 295</span>
+              </div>
+              <p class="menu-item-desc">Authentic Wagyu, purebred Black cattle, Japan (min. 200g), price per 100g</p>
+            </li>
+          </ul>
+          <a href="https://wrestaurant.cz/menu" class="btn-ghost btn-ghost--dark menu-panel-cta">View Full Menu</a>
+        </div>
+
+        <div class="menu-media">
+          <figure class="menu-media-main">
+            <img src="assets/images/rib-eye.jpg" alt="Rib Eye Argentina on charcoal grill" loading="lazy" width="900" height="1100">
+          </figure>
+          <figure class="menu-media-side">
+            <img src="assets/images/filet-mignon.jpg" alt="Filet Mignon" loading="lazy" width="700" height="700">
+          </figure>
+        </div>
+      </div>
+
+      <div class="menu-spread menu-spread--drinks bleed reveal">
+        <div class="menu-media menu-media--stack">
+          <figure>
+            <img src="assets/images/wine.jpg" alt="Grand wine selection" loading="lazy" width="700" height="900">
+          </figure>
+          <figure>
+            <img src="assets/images/whiskey.jpg" alt="Whiskey bar collection" loading="lazy" width="700" height="900">
+          </figure>
+        </div>
+
+        <div class="menu-panel menu-panel--linen">
+          <h3 class="menu-panel-title">Wine &amp; whiskey</h3>
+          <p class="menu-panel-lead">Drinks that complete the steakhouse experience.</p>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Grand Wines</span>
+                <span class="menu-item-price">List</span>
+              </div>
+              <p class="menu-item-desc">World vintages with emphasis on exceptional Israeli wines</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Whiskey Bar</span>
+                <span class="menu-item-price">1 000+</span>
+              </div>
+              <p class="menu-item-desc">Expressions from Scotland, Ireland, Japan, India, Hong Kong &amp; Czech Republic</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Champagne &amp; Sparklings</span>
+                <span class="menu-item-price">List</span>
+              </div>
+              <p class="menu-item-desc">Moët, Prosecco and curated bottles for the table</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Classic Cocktails</span>
+                <span class="menu-item-price">List</span>
+              </div>
+              <p class="menu-item-desc">Manhattan, whiskey sour and house signatures</p>
+            </li>
+          </ul>
+          <a href="https://wrestaurant.cz/menu" class="btn-ghost btn-ghost--dark menu-panel-cta">Open Drink Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Atmospheric video band -->
+    <section class="atmo bleed" id="experience" data-nav-theme="dark">
+      <div class="media-bg">
+        <video class="media-bg__video" autoplay muted loop playsinline poster="assets/images/rib-eye.jpg" aria-hidden="true">
+          <source src="assets/video/steak-cut.mp4" type="video/mp4">
+          <source src="assets/video/meat-grill.mp4" type="video/mp4">
+        </video>
+        <img class="media-bg__fallback" src="assets/images/rib-eye.jpg" alt="" width="1920" height="1080">
+      </div>
+      <div class="media-overlay media-overlay--deep" aria-hidden="true"></div>
+      <div class="atmo-inner editorial">
+        <p class="caption-label caption-label--light reveal">The experience</p>
+        <h2 class="display-heading display-heading--on-dark reveal">Cellars steps from the square</h2>
+        <p class="body-copy body-copy--on-dark reveal">Exceptional cuisine, sophisticated ambiance, and welcoming service in the historic heart of Prague.</p>
+        <a href="https://wrestaurant.cz/book-a-table" class="btn-ghost btn-ghost--light reveal">Book a Table</a>
+      </div>
+    </section>
+
+    <section class="section bleed" data-nav-theme="light">
+      <div class="section-inner editorial">
+        <p class="caption-label">Pairings</p>
+        <h2 class="display-heading">Wine &amp; whiskey</h2>
+      </div>
+      <div class="pairing-grid bleed">
+        <div class="pairing-cell">
+          <img src="assets/images/wine.jpg" alt="Grand wine selection" loading="lazy" width="660" height="900">
+          <div class="pairing-copy">
+            <h3 class="display-heading display-heading--sm">Grand wines</h3>
+            <p class="body-copy">World vintages with emphasis on exceptional Israeli wines.</p>
+            <a href="https://wrestaurant.cz/menu" class="link-text">Wine list</a>
+          </div>
+        </div>
+        <div class="pairing-cell pairing-cell--video">
+          <div class="pairing-video-wrap">
+            <img src="assets/images/whiskey.jpg" alt="Whiskey bar VIP lounge" loading="lazy" width="660" height="900">
+          </div>
+          <div class="pairing-copy">
+            <h3 class="display-heading display-heading--sm">Whiskey bar</h3>
+            <p class="body-copy">1,000+ expressions from Scotland, Ireland, Japan, India, Hong Kong, and the Czech Republic.</p>
+            <a href="https://wrestaurant.cz/menu" class="link-text">Discover</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials bleed" id="reviews" data-nav-theme="light">
+      <div class="section-inner editorial">
+        <p class="caption-label">Guest voices</p>
+        <h2 class="display-heading">Praised in Prague</h2>
+      </div>
+      <div class="testimonial-scroll">
+        <blockquote class="testimonial-card">
+          <header class="testimonial-head">
+            <span class="caption-label">Google</span>
+            <span class="stars" aria-hidden="true">★★★★★</span>
+          </header>
+          <p>One of the best steakhouses in the city — perfect meat, great wine list, and an unforgettable whiskey collection.</p>
+          <cite>Guest review</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <header class="testimonial-head">
+            <span class="caption-label">TripAdvisor</span>
+            <span class="stars" aria-hidden="true">★★★★★</span>
+          </header>
+          <p>Amazing atmosphere next to Old Town Square. The rib eye on charcoal grill is outstanding.</p>
+          <cite>Guest review</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <header class="testimonial-head">
+            <span class="caption-label">Maps</span>
+            <span class="stars" aria-hidden="true">★★★★★</span>
+          </header>
+          <p>Sophisticated ambiance and service that lives up to the Meat, Wine & Whiskey promise.</p>
+          <cite>Guest review</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="gallery-strip bleed" id="gallery" aria-label="Gallery">
+      <img src="assets/images/us-prime.jpg" alt="US Prime steak" loading="lazy" width="600" height="600">
+      <img src="assets/images/about-interior.jpg" alt="Cellar interior" loading="lazy" width="600" height="600">
+      <img src="assets/images/whiskey.jpg" alt="Whiskey lounge" loading="lazy" width="600" height="600">
+      <img src="assets/images/wine.jpg" alt="Wine service" loading="lazy" width="600" height="600">
+    </section>
+
+    <section class="section bleed" id="contact" data-nav-theme="light">
+      <div class="section-inner contact-grid editorial">
+        <div>
+          <p class="caption-label">Visit</p>
+          <h2 class="display-heading">Reserve your table</h2>
+          <p class="body-copy">Book on the official website. This page is an unofficial design concept.</p>
+          <p class="contact-cta">
+            <a href="https://wrestaurant.cz/book-a-table" class="btn-ghost btn-ghost--dark">Reserve a Table</a>
+          </p>
+        </div>
+        <ul class="contact-list">
+          <li><strong>Location</strong> Old Town Square · Prague</li>
+          <li><strong>Phone</strong> <a href="tel:+420730779999">+420 730 779 999</a></li>
+          <li><strong>Web</strong> <a href="https://wrestaurant.cz">wrestaurant.cz</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer bleed">
+    <div class="footer-inner editorial">
+      <p class="caption-label">Unofficial concept</p>
+      <p class="footer-note">Brand assets belong to W Steak Restaurant. <a href="https://wrestaurant.cz">Official site →</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

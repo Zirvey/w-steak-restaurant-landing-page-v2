@@ -1,0 +1,10 @@
+{
+  "name": "w-steak-restaurant-landing-page-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bash scripts/serve.sh",
+    "serve": "python3 -m http.server 8765 --bind 127.0.0.1",
+    "screenshots": "node scripts/capture-screenshots.mjs"
+  }
+}
