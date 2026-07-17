@@ -12,9 +12,9 @@ An **alternative editorial** UI/UX concept for the landing page of **W Steak Res
 
 ## Preview
 
-<video src="https://github.com/Zirvey/w-steak-restaurant-landing-page-v2/raw/main/docs/preview-hero.mp4" controls muted playsinline width="100%"></video>
+<video src="https://github.com/Zirvey/w-steak-restaurant-landing-page-v2/raw/main/docs/preview-scroll.mp4" controls muted playsinline width="100%"></video>
 
-Hero entrance, then scroll to the grill atmosphere section. Stills below are from **this editorial (v2) site only**.
+Page open (hero entrance) and full scroll to the bottom. Stills below are from **this editorial (v2) site only**.
 
 ### Desktop
 

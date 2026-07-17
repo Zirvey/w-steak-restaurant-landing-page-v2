@@ -1,6 +1,5 @@
 import puppeteer from 'puppeteer';
-import { mkdir, rm } from 'fs/promises';
-import { stat } from 'fs/promises';
+import { mkdir, rm, stat } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
@@ -8,7 +7,7 @@ import { spawn } from 'child_process';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const FRAMES_DIR = path.join(ROOT, 'docs', 'screenshots', '_frames');
-const OUT_MP4 = path.join(ROOT, 'docs', 'preview-hero.mp4');
+const OUT_MP4 = path.join(ROOT, 'docs', 'preview-scroll.mp4');
 const URL = process.env.SHOT_URL || 'http://127.0.0.1:8765/';
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
@@ -51,6 +50,16 @@ await page.evaluateOnNewDocument(() => {
     :root, html { --concept-banner-height: 0px !important; }
   `;
   document.documentElement.appendChild(style);
+
+  // Disable Lenis so scripted window.scrollTo is predictable
+  window.Lenis = undefined;
+  Object.defineProperty(window, 'Lenis', {
+    configurable: true,
+    get() {
+      return undefined;
+    },
+    set() {},
+  });
 });
 
 await page.goto(URL, { waitUntil: 'networkidle0', timeout: 60000 });
@@ -60,12 +69,13 @@ await page.evaluate(() => {
   document.getElementById('concept-banner')?.remove();
   document.body.classList.remove('has-concept-banner');
   document.documentElement.style.setProperty('--concept-banner-height', '0px');
+  document.documentElement.classList.remove('lenis', 'lenis-smooth');
   window.scrollTo(0, 0);
 });
 
-await sleep(500);
+await sleep(400);
 
-// Replay hero entrance so the recording captures the animation from the start
+// Replay hero entrance
 await page.evaluate(() => {
   document.body.classList.remove('is-ready');
   document.querySelectorAll('.hero-split, .hero-anim').forEach((el) => el.classList.remove('is-in'));
@@ -76,21 +86,18 @@ await page.evaluate(() => {
   document.querySelectorAll('.hero-split, .hero-anim').forEach((el) => el.classList.add('is-in'));
 });
 
-const heroHoldMs = 3000;
-const scrollMs = 2400;
-const videoHoldMs = 3400;
-const totalMs = heroHoldMs + scrollMs + videoHoldMs;
+const heroHoldMs = 2800;
+const scrollMs = 16000;
+const bottomHoldMs = 2200;
+const totalMs = heroHoldMs + scrollMs + bottomHoldMs;
 const totalFrames = Math.round((totalMs / 1000) * FPS);
 
-const scrollTarget = await page.evaluate(() => {
-  const el = document.querySelector('.hero-video');
-  if (!el) return 0;
-  const nav = document.getElementById('site-nav');
-  const offset = (nav?.offsetHeight || 0) + 8;
-  return Math.max(0, el.offsetTop - offset);
+const maxScroll = await page.evaluate(() => {
+  const doc = document.documentElement;
+  return Math.max(0, doc.scrollHeight - window.innerHeight);
 });
 
-console.log(`Recording ~${(totalMs / 1000).toFixed(1)}s at ${FPS}fps (${totalFrames} frames)`);
+console.log(`Recording full-page scroll ~${(totalMs / 1000).toFixed(1)}s (${totalFrames} frames, maxScroll=${maxScroll}px)`);
 
 const start = Date.now();
 
@@ -102,14 +109,19 @@ for (let i = 0; i < totalFrames; i++) {
   const t = targetTime;
   let y = 0;
   if (t >= heroHoldMs && t <= heroHoldMs + scrollMs) {
-    y = scrollTarget * easeInOut((t - heroHoldMs) / scrollMs);
+    y = maxScroll * easeInOut((t - heroHoldMs) / scrollMs);
   } else if (t > heroHoldMs + scrollMs) {
-    y = scrollTarget;
+    y = maxScroll;
   }
 
   await page.evaluate((scrollY) => {
     window.scrollTo(0, scrollY);
     window.dispatchEvent(new Event('scroll'));
+    // Reveal sections as they enter the viewport during the recording
+    document.querySelectorAll('.reveal, .reveal-in').forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92) el.classList.add('is-visible');
+    });
   }, y);
 
   await page.screenshot({
@@ -117,7 +129,7 @@ for (let i = 0; i < totalFrames; i++) {
     type: 'png',
   });
 
-  if (i % FPS === 0) console.log(`  ${Math.round(t / 1000)}s`);
+  if (i % FPS === 0) console.log(`  ${Math.round(t / 1000)}s / y=${Math.round(y)}`);
 }
 
 await browser.close();
@@ -128,7 +140,7 @@ await run('ffmpeg', [
   '-i', path.join(FRAMES_DIR, 'frame-%04d.png'),
   '-c:v', 'libx264',
   '-pix_fmt', 'yuv420p',
-  '-crf', '22',
+  '-crf', '23',
   '-movflags', '+faststart',
   OUT_MP4,
 ]);
