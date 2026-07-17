@@ -7,7 +7,8 @@ import { spawn } from 'child_process';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const FRAMES_DIR = path.join(ROOT, 'docs', 'screenshots', '_frames');
-const OUT_MP4 = path.join(ROOT, 'docs', 'preview-scroll.mp4');
+const OUT_MP4 = path.join(ROOT, 'preview-scroll.mp4');
+const OUT_DOCS = path.join(ROOT, 'docs', 'preview-scroll.mp4');
 const URL = process.env.SHOT_URL || 'http://127.0.0.1:8765/';
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
@@ -147,5 +148,9 @@ await run('ffmpeg', [
 
 await rm(FRAMES_DIR, { recursive: true, force: true });
 
+const { copyFile } = await import('fs/promises');
+await copyFile(OUT_MP4, OUT_DOCS);
+
 const info = await stat(OUT_MP4);
 console.log(`Done: ${OUT_MP4} (${(info.size / 1024 / 1024).toFixed(1)} MB)`);
+console.log(`Copy: ${OUT_DOCS}`);

@@ -12,7 +12,10 @@ An **alternative editorial** UI/UX concept for the landing page of **W Steak Res
 
 ## Preview
 
-<video src="https://github.com/Zirvey/w-steak-restaurant-landing-page-v2/raw/main/docs/preview-scroll.mp4" controls muted playsinline width="100%"></video>
+[![Watch full page scroll](docs/screenshots/hero-desktop.jpg)](https://github.com/Zirvey/w-steak-restaurant-landing-page-v2/releases/download/preview/preview-scroll.mp4)
+
+**[▶ Watch full page scroll (MP4)](https://github.com/Zirvey/w-steak-restaurant-landing-page-v2/releases/download/preview/preview-scroll.mp4)**  
+File in repo: [`preview-scroll.mp4`](./preview-scroll.mp4) · [Releases](https://github.com/Zirvey/w-steak-restaurant-landing-page-v2/releases/tag/preview)
 
 Page open (hero entrance) and full scroll to the bottom. Stills below are from **this editorial (v2) site only**.
 
