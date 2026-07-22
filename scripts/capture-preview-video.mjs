@@ -44,14 +44,6 @@ const page = await browser.newPage();
 await page.setViewport({ width: WIDTH, height: HEIGHT, deviceScaleFactor: 1 });
 
 await page.evaluateOnNewDocument(() => {
-  const style = document.createElement('style');
-  style.textContent = `
-    .concept-banner { display: none !important; }
-    body.has-concept-banner { padding-top: 0 !important; }
-    :root, html { --concept-banner-height: 0px !important; }
-  `;
-  document.documentElement.appendChild(style);
-
   // Disable Lenis so scripted window.scrollTo is predictable
   window.Lenis = undefined;
   Object.defineProperty(window, 'Lenis', {
@@ -67,9 +59,6 @@ await page.goto(URL, { waitUntil: 'networkidle0', timeout: 60000 });
 await page.waitForSelector('.hero-display', { timeout: 15000 });
 
 await page.evaluate(() => {
-  document.getElementById('concept-banner')?.remove();
-  document.body.classList.remove('has-concept-banner');
-  document.documentElement.style.setProperty('--concept-banner-height', '0px');
   document.documentElement.classList.remove('lenis', 'lenis-smooth');
   window.scrollTo(0, 0);
 });

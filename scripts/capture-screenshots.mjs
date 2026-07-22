@@ -18,11 +18,6 @@ const shots = [
 
 async function preparePage(page) {
   await page.evaluate(() => {
-    // Hide concept disclaimer for README previews
-    document.getElementById('concept-banner')?.remove();
-    document.body.classList.remove('has-concept-banner');
-    document.documentElement.style.setProperty('--concept-banner-height', '0px');
-
     document.body.classList.add('is-ready');
     document.querySelectorAll('.hero-split, .hero-anim').forEach((el) => {
       el.classList.add('is-in');

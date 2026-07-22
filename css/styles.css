@@ -90,96 +90,6 @@ a {
   width: 100%;
 }
 
-/* Concept disclaimer banner — same as first W Steak concept */
-:root {
-  --concept-banner-height: 2.875rem;
-}
-
-.concept-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  min-height: var(--concept-banner-height);
-  background: linear-gradient(90deg, #CA8A04, #DB821F);
-  color: #1C1917;
-  border-bottom: 1px solid rgba(28, 25, 23, 0.12);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-}
-
-.concept-banner-inner {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.concept-banner-icon {
-  width: 1.125rem;
-  height: 1.125rem;
-  flex-shrink: 0;
-  opacity: 0.85;
-}
-
-.concept-banner-text {
-  margin: 0;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.45;
-  text-align: center;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.concept-banner-text strong {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.concept-banner-sep {
-  margin: 0 0.25rem;
-  opacity: 0.5;
-}
-
-.concept-banner-cs {
-  display: none;
-}
-
-.concept-banner-link {
-  display: inline-block;
-  margin-left: 0.35rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  color: #1C1917;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: opacity 0.2s ease;
-}
-
-.concept-banner-link:hover {
-  opacity: 0.75;
-}
-
-@media (min-width: 640px) {
-  .concept-banner-text {
-    font-size: 0.8125rem;
-  }
-
-  .concept-banner-cs {
-    display: inline;
-  }
-}
-
-body.has-concept-banner {
-  padding-top: var(--concept-banner-height);
-}
-
 /* Typography tokens */
 .caption-label {
   font-size: 12px;
@@ -247,7 +157,7 @@ body.has-concept-banner {
 /* Nav — transparent over hero (DESIGN.md) */
 .site-nav {
   position: fixed;
-  top: var(--concept-banner-height);
+  top: 0;
   left: 0;
   right: 0;
   z-index: 90;
